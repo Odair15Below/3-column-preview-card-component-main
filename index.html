@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <style>
+    :root {
+      --clr-primary-brightOrange: hsl(31, 77%, 52%);
+      --clr-primary-darkCyan: hsl(184, 100%, 22%);
+      --clr-primary-veryDarkCyan: hsl(179, 100%, 13%);
+      --clr-neutral-transparentWhite: hsla(0, 0%, 100%, 0.75);
+      --clr-neutral-veryLightGray: hsl(0, 0%, 95%);
+      --ff-primary: "Lexend Deca", sans-serif;
+      --ff-secondary: 'Big Shoulders Display', cursive;
+      --fw-regular: 400;
+      --fw-heavy: 700;
+      --fs-body: 15px;
+    }
+
+    /* Showcase Body (Centers Card to Page) - CSS Grid Method */
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Initialization, Normalization */
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      background-color: var(--clr-neutral-veryLightGray);
+      font-family: var(--ff-primary);
+      font-size: var(--fs-body);
+      font-weight: var(--fw-regular);
+      color: var(--clr-neutral-transparentWhite);
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      margin: 0;
+    }
+
+    .container {
+      width: 920px;
+      border-radius: 10px;
+      height: 500px;
+      margin: 0 auto;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+    }
+
+    h1 {
+      font-family: var(--ff-secondary);
+      text-transform: uppercase;
+      font-weight: var(--fw-heavy);
+      font-size: 2.25rem;
+    }
+
+    .column {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .column p {
+      flex: auto;
+      line-height: 1.75rem;
+      letter-spacing: 1pt;
+    }
+
+    .column button {
+      border-radius: 2rem;
+      border: none;
+      padding: 1rem 2rem;
+      font-family: var(--ff-primary);
+      width: fit-content;
+      background-color: var(--clr-neutral-transparentWhite);
+    }
+
+    .column button:hover {
+      background-color: transparent;
+      border: 1px solid var(--clr-neutral-transparentWhite);
+      color: var(--clr-neutral-transparentWhite);
+      cursor: pointer;
+    }
+
+    .column img {
+      width: 64px;
+      height: 40px;
+    }
+
+    .column h1 {
+      color: var(--clr-neutral-veryLightGray);
+    }
+
+    .orange {
+      background-color: var(--clr-primary-brightOrange);
+    }
+
+    .gray {
+      background-color: var(--clr-primary-darkCyan);
+    }
+
+    .darkGray {
+      background-color: var(--clr-primary-veryDarkCyan);
+    }
+
+    .clrOrange {
+      color: var(--clr-primary-brightOrange);
+    }
+
+    .clrGray {
+      color: var(--clr-primary-darkCyan);
+    }
+
+    .clrDarkGray {
+      color: var(--clr-primary-veryDarkCyan);
+    }
+
+    @media screen and (max-width: 980px) {
+
+      .container {
+        max-width: 345px;
+        border-radius: 10px;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="column orange">
+      <img src='/images/icon-sedans.svg' alt='Sedan car icon' />
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <button class="clrOrange">Learn more</button>
+    </div>
+    <div class="column gray">
+      <img src='/images/icon-suvs.svg' alt='SUV car icon' />
+      <h1>SUVs</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
+      </p>
+      <button class="clrGray">Learn more</button>
+    </div>
+    <div class="column darkGray">
+      <img src='/images/icon-luxury.svg' alt='Luxury car icon' />
+      <h1>Luxury</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <button class="clrDarkGray">Learn more</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
