@@ -100,7 +100,7 @@
 
     .column button {
       border-radius: 2rem;
-      border: none;
+      border: 1px solid transparent;
       padding: 1rem 2rem;
       font-family: var(--ff-primary);
       width: fit-content;
@@ -109,9 +109,9 @@
 
     .column button:hover {
       background-color: transparent;
-      border: 1px solid var(--clr-neutral-transparentWhite);
       color: var(--clr-neutral-transparentWhite);
       cursor: pointer;
+      border: 1px solid var(--clr-neutral-transparentWhite);
     }
 
     .column img {
@@ -167,7 +167,7 @@
 
 <body>
 
-  <div class="container">
+  <main class="container">
     <div class="column orange">
       <img src='./images/icon-sedans.svg' alt='Sedan car icon' />
       <h1>Sedans</h1>
@@ -195,15 +195,7 @@
       </p>
       <button class="clrDarkGray">Learn more</button>
     </div>
-  </div>
-
-
-
-
-
-
-
-
+  </main>
 </body>
 
 </html>
